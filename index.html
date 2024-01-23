@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rps</title>
+    <style>
+        h1{
+            background-color:chartreuse;
+            color:black;
+            height: 50px;
+            width: 100px;
+            margin: 20px;
+            border-radius: 20px;
+            border:5px;
+            border-style: double; 
+            position: relative;
+            left: 250px;
+            border-color: rgb(22, 20, 20);
+            
+            
+            }
+        .rock{
+            background-image:url("rock1");
+            color:black;
+            height: 210px;
+            width: 200px;
+            margin: 20px;
+            border-radius: 20px;
+            border:5px;
+            border-style:double; 
+            position: relative;
+            top: 5px;
+            
+            
+        }
+        .paper{
+            background-image:url("paper");
+            color:black;
+            height: 210px;
+            width: 200px;
+            margin: 20px;
+            border-radius: 20px;
+            border:5px;
+            border-style:double; 
+            position: relative;
+            top: 5px;
+        
+        }
+
+        .scissor{
+            background-image: url("scissor.png");
+            color:black ;
+            height: 210px;
+            width: 200px;
+            margin: 20px;
+            border:5px;
+            border-radius: 20px;
+            position: relative;
+            top: 5px;
+            border-style:double;
+         }
+         body{
+            background-color: burlywood;
+    
+         }
+         
+    </style>
+</head>
+<body>
+    <h1>Game</h1>
+    <button class="rock" onclick="
+            const computermove=Math.random();
+             let randommove='';
+            if(computermove>=0 && computermove< 1/3){
+                randommove='rock';
+            }
+            else if(computermove>=1/3 && computermove < 2/3){
+                randommove='paper';
+            }
+            else if(computermove>=2/3 && computermove <1){
+                randommove='scissor';
+            }
+            console.log(randommove);
+            let result='';
+            if(randommove==='rock'){
+                result='tie'
+            }
+            else if( randommove==='paper'){
+                result='you lose'
+            }
+            else if(randommove==='scissor'){
+                result='you win'
+            }
+            alert(`you picked rock \ncomputer picked ${randommove} \n ${result}`);
+
+            
+
+    
+    "> </button>
+    <button class="paper" onclick="
+            const computermove=Math.random();
+             let randommove='';
+            if(computermove>=0 && computermove< 1/3){
+                randommove='rock';
+            }
+            else if(computermove>=1/3 && computermove < 2/3){
+                randommove='paper';
+            }
+            else if(computermove>=2/3 && computermove <1){
+                randommove='scissor';
+            }
+            console.log(randommove);
+            let result='';
+            if(randommove==='rock'){
+                result='you win'
+            }
+            else if( randommove==='paper'){
+                result='tie'
+            }
+            else if(randommove==='scissor'){
+                result='you lose'
+            }
+            alert(`you picked paper \ncomputer picked ${randommove}\n ${result}`);
+
+            
+        "></button>
+    <button class="scissor" onclick="
+            const computermove=Math.random();
+             let randommove='';
+            if(computermove>=0 && computermove< 1/3){
+                randommove='rock';
+            }
+            else if(computermove>=1/3 && computermove < 2/3){
+                randommove='paper';
+            }
+            else if(computermove>=2/3 && computermove <1){
+                randommove='scissor';
+            }
+            console.log(randommove);
+            let result='';
+            if(randommove==='rock'){
+                result='you lose'
+            }
+            else if( randommove==='paper'){
+                result='you win'
+            }
+            else if(randommove==='scissor'){
+                result='tie'
+            }
+            alert(`you picked scissor\ncomputer picked ${randommove}\n ${result}`);
+
+            
+    
+    ">   </button>
+</body>
+</html>
